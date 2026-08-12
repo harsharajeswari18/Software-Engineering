@@ -9,7 +9,7 @@ weight=[  8, 10 , 12, 14, 16, 18, 20]
 plt.scatter(height,weight,color='black')
 plt.xlabel("height")
 plt.ylabel("weight")
-harsha=linear_model.LinearRegression()
-harsha.fit(height,weight)
+reg=linear_model.LinearRegression()
+reg.fit(height,weight)
 X_height=[[12.0]]
 print(reg.predict(X_height))
