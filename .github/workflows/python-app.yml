@@ -37,5 +37,5 @@ jobs:
 
       - name: Test with Python
         run: |
-          python x.py
-          pylint x.py
+          python se2.py
+          pylint se2.py
