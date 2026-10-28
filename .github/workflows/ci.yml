@@ -1,5 +1,5 @@
 
-name: CI - Test and Build
+name: System Log Anomaly Detection CI
 
 on:
   push:
@@ -21,9 +21,11 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
+        working-directory: System_Log_Anomaly_Detection_Two_Sprint_Package
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run tests
-        run: python -m pytest -q
+      - name: Run anomaly detection tests
+        working-directory: System_Log_Anomaly_Detection_Two_Sprint_Package
+        run: python -m pytest -q tests/test_app.py
